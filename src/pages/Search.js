@@ -6,7 +6,7 @@ const Search = ({ apiPath }) => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q");
   const { movie: movies } = useFetch(apiPath, queryTerm);
-  const pageTitle = useTitle(`Search for: ${queryTerm} / Movie`);
+  useTitle(`Search for: ${queryTerm} / Movie`);
 
   return (
     <main>

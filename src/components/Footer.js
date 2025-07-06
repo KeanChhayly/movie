@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
             >
               Facebook
             </a>
-          </li>
+          </li> 
           <li>
             <a
               href="https://www.instagram.com/__lyy______/"

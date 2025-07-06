@@ -1,8 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import movieImg from "../assets/movie_img.png";
 const Header = () => {
   const navigate = useNavigate();
-  const [search, setSearch] = useState("");
+
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
@@ -38,7 +39,6 @@ const Header = () => {
     }
   }, [darkMode]);
 
-  console.log(search);
   const active =
     "text-base block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500";
   const inactive =
@@ -51,11 +51,7 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
+            <img src={movieImg} className="h-8" alt="MovieImg" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Flowbite
             </span>

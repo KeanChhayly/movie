@@ -1,4 +1,3 @@
-import React, { use } from "react";
 import backup from "../assets/backup.svg";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -8,7 +7,7 @@ const MovieDetail = ({ title }) => {
   const [movie, setmovie] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const pageTitle = useTitle(movie.title);
+  useTitle(movie.title);
   const image = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
     : backup;
